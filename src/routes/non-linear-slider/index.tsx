@@ -28,18 +28,11 @@ function NonLinearSlider() {
 
   return (
     <div>
-      <Slider
-        className="slider"
-        maxValue={steps.length - 1}
-        value={value}
-        onChange={setValue}
-      >
+      <Slider maxValue={steps.length - 1} value={value} onChange={setValue}>
         <Label>Distance</Label>
-        <SliderOutput className="slider-output">
-          {formattedDistance}
-        </SliderOutput>
-        <SliderTrack className="slider-track">
-          <SliderThumb className="slider-thumb" inputRef={sliderRef} />
+        <SliderOutput>{formattedDistance}</SliderOutput>
+        <SliderTrack>
+          <SliderThumb inputRef={sliderRef} />
         </SliderTrack>
       </Slider>
     </div>
